@@ -7,6 +7,8 @@ Resources:
 ##
 Supported method: GET, POST, PUT, PATCH, DELETE
 
+Header Content-Type must be application/json
+
 ##
 Example
 
