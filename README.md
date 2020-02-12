@@ -11,6 +11,35 @@ Supported method: GET, POST, PUT, PATCH, DELETE
 Header Content-Type must be application/json
 
 ##
+Requirements
+
+- PostgreSQL
+
+  ```
+  > Docker pull postgres
+  > Docker container create --name scala-api-exp -e POSTGRES_PASSWORD=testing -p 35432:5432 postgres
+  > Docker start scala-api-exp
+
+- Create database
+
+  ```
+  -- Login to PostgreSQL
+  > psql -d postgres -p 35432 --username postgres
+  
+  -- Create user admin:
+  > postgres=# create user dbadmin with password 'test_password'
+  
+  -- Create the database :
+  > postgres=# CREATE DATABASE api WITH OWNER=dbadmin
+                  LC_COLLATE='en_US.utf8'
+                  LC_CTYPE='en_US.utf8'
+                  ENCODING='UTF8'
+                  TEMPLATE=template0;
+  
+
+ - Schema & tables will be handled by Flyway migration.
+
+##
 Example
 
 ##
