@@ -27,7 +27,7 @@ Requirements
   > psql -d postgres -p 35432 --username postgres
   
   -- Create user admin:
-  > postgres=# CREATE USER dbadmin WITH password 'test_password'
+  > postgres=# CREATE USER dbadmin WITH password 'test_password';
   
   -- Create the database :
   > postgres=# CREATE DATABASE api WITH OWNER=dbadmin
