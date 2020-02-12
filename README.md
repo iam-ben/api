@@ -5,4 +5,4 @@ Resources:
   - calendars(id: Int, title: String, description: String, date_start: Timestamp, date_end: Timestamp)
 
 ##
-Supported method: GET, POST, DELETE, PUT, PATCH
+Supported method: GET, POST, PUT, PATCH, DELETE
