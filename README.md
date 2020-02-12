@@ -37,10 +37,9 @@ Requirements
                   TEMPLATE=template0;
   
 
- - Schema & tables will be handled by Flyway migration.
+ - Schema & tables will be handled by [Flyway](https://flywaydb.org/) migration.
 
-##
-Example
+**Task Example**
 
 ##
 Retreive all tasks
@@ -92,4 +91,5 @@ Delete task id 1
 ```DELETE /v1/tasks/1```
 
 #
-The same operation we can do with calendars resource.
+The same operation we can do with calendars resource. Date must in ISO format e.g. 2020-02-17T19:37:46.000-0500
+
