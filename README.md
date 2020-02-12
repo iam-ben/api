@@ -41,7 +41,7 @@ Update task id 1 with JSON object (all fields are required)
   "description": "my updated description"
 }
 
-PUT /v1/tasks
+PUT /v1/tasks/1
 ```
 
 ##
@@ -51,7 +51,7 @@ Update task id 1 with JSON object (update only some fileds, not all fields are r
   "title": "my patched title",
 }
 
-PATCH /v1/tasks
+PATCH /v1/tasks/1
 ```
 
 ##
