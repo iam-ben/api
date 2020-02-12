@@ -23,8 +23,8 @@ class CalendarsApiSpec extends BaseServiceSpec with ScalaFutures{
         JsObject(
           "title" -> JsString(newTitle),
           "description" -> JsString(testCalendars.head.description),
-          "date_start" -> JsString(testCalendars.head.date_start),
-          "date_end" -> JsString(testCalendars.head.date_end)
+          "date_start" -> JsString(testCalendars.head.date_start.toString()),
+          "date_end" -> JsString(testCalendars.head.date_end.toString())
         ).toString())
       Post("/calendars", requestEntity) ~> calendarsApi ~> check {
         response.status should be(StatusCode.int2StatusCode(200))
@@ -39,8 +39,8 @@ class CalendarsApiSpec extends BaseServiceSpec with ScalaFutures{
         JsObject(
           "title" -> JsString(newTitle),
           "description" -> JsString(testCalendars.head.description),
-          "date_start" -> JsString(testCalendars.head.date_start),
-          "date_end" -> JsString(testCalendars.head.date_end)
+          "date_start" -> JsString(testCalendars.head.date_start.toString()),
+          "date_end" -> JsString(testCalendars.head.date_end.toString())
         ).toString())
       Put("/calendars/1", requestEntity) ~> calendarsApi ~> check {
         response.status should be(StatusCode.int2StatusCode(200))
